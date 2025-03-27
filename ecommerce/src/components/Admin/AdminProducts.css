@@ -1,0 +1,94 @@
+.admin-products {
+    background-image: url(https://img.freepik.com/free-photo/top-view-desk-with-black-friday-gifts_23-2148288216.jpg?t=st=1742995843~exp=1742999443~hmac=3c80c85da0a6993d19d100b58b0ef140f4ef0a83f1ff4b014b6f523f8f4c52f2&w=1380);
+    background-size: cover;
+    background-position: center;
+    
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+   
+}
+.admin-sidebar {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    display: flex;
+   
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+.admin-product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(240, 163, 133, 0.3);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.admin-product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+}
+
+.admin-product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.admin-product-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.admin-product-item h2 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.admin-product-item p {
+    margin: 5px 0;
+    color: #777;
+}
+
+.admin-product-item .cat-tag {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.admin-product-item .delete-prod {
+    background-color: transparent;
+    border: none;
+    color: #ff0000;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.admin-product-item .delete-prod:hover {
+    color: #cc0000;
+}

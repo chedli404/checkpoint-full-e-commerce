@@ -1,0 +1,866 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Bebas+Neue&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Cookie&family=Dancing+Script:wght@400..700&family=Lexend+Deca:wght@100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,500;1,100&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Orbitron:wght@400..900&family=Poppins:wght@300&family=Rubik+Mono+One&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#sidebar h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#sidebar h3:hover {
+    color: #007bff;
+    background-color: #e9ecef;
+    padding-left: 10px;
+    border-radius: 4px;
+}
+
+#sidebar h3.active {
+    color: #fff;
+    background-color: #007bff;
+    padding-left: 10px;
+    border-radius: 4px;
+}
+
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    align-content: center;
+}
+
+
+.nav-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav-right {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    display: flex;
+    gap: 20px;
+}
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 123, 0);
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: rgb(179, 51, 0);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.search-bar {
+    border-radius: 10px;
+    border: 0.5px solid lightgray;
+    font-family: "Montserrat", sans-serif;
+    padding: 5px;
+}
+
+.User {
+    color: red;
+}
+
+.hero-section {
+    display: flex;
+    position: relative;
+    margin: 8px;
+    padding: 5px;
+    width: 1480px;
+    height: 642px;
+}
+
+.hero1,
+.hero3,
+.hero4,
+.hero5 {
+    height: 638px;
+    width: 755.4px;
+    background-image: url(https://img.freepik.com/free-photo/top-view-smartphone-with-keyboard-charger_23-2149404179.jpg?t=st=1742946755~exp=1742950355~hmac=845448e2cd9393bf93d34a1c4c0b3308b2d649dc934f3666bdc740c2b8a8c75c&w=996);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero1 h1 {
+    font-family: "Cookie", cursive;
+    margin-top: 0px;
+    margin-bottom: 0.5rem;
+    color: rgb(107, 71, 62);
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 100px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+.hero1 p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: rgb(68, 64, 64);
+    font-size: 20px;
+    position: absolute;
+    top: 35%;
+    left: 9.5%;
+}
+
+.hero1-button {
+    color: rgb(184, 56, 33);
+    text-decoration: none !important;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.hero1-button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 123, 0);
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+
+.hero1-button:hover::after {
+    width: 100%;
+}
+
+.hero1-button:hover {
+    color: rgb(179, 51, 0);
+}
+
+.hero2 {
+    height: 314px;
+    width: 350px;
+    position: absolute;
+    left: 770px;
+    background-image: url(https://img.freepik.com/free-photo/portrait-young-handsome-man-yellow-scene_23-2148184575.jpg?uid=R186515587&ga=GA1.1.1469364995.1732720250&semt=ais_hybrid);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero2 h1 {
+    font-family: "Cookie", cursive;
+    margin-top: 0px;
+    margin-bottom: 0.5rem;
+    color: rgb(107, 71, 62);
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 70px;
+    position: absolute;
+    top: 30%;
+    left: 3%;
+}
+
+.hero2 p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: rgb(68, 64, 64);
+    font-size: 15px;
+    position: absolute;
+    top: 48%;
+    left: 10%;
+}
+
+.hero2-button {
+    color: rgb(184, 56, 33);
+    text-decoration: none !important;
+    background-color: transparent;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.hero2-button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 123, 0);
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+
+.hero2-button:hover::after {
+    width: 100%;
+}
+
+.hero2-button:hover {
+    color: rgb(179, 51, 0);
+}
+
+
+.hero3 {
+    height: 314px;
+    width: 350px;
+    position: absolute;
+    top: 329px;
+    left: 770px;
+    background-image: url(https://preview.colorlib.com/theme/ashion/img/categories/category-1.jpg.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero3 h1 {
+    font-family: "Cookie", cursive;
+    color: rgb(107, 71, 62);
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    font-size: 50px;
+    position: absolute;
+    top: 20%;
+    left: 1%;
+}
+
+.hero3 p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: rgb(68, 64, 64);
+    font-size: 15px;
+    position: absolute;
+    top: 35%;
+    left: 11%;
+}
+
+.hero3-button {
+    color: rgb(184, 56, 33);
+    text-decoration: none !important;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.hero3-button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 123, 0);
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+
+.hero3-button:hover::after {
+    width: 100%;
+}
+
+.hero3-button:hover {
+    color: rgb(179, 51, 0);
+}
+
+
+.hero4 {
+    height: 314px;
+    width: 350px;
+    position: absolute;
+    left: 1130px;
+    background-image: url(https://img.freepik.com/free-photo/elevated-view-camera-lens-spiral-notebook-cellphone-personal-accessories-background_23-2147856120.jpg?uid=R186515587&ga=GA1.1.1469364995.1732720250&semt=ais_hybrid);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero4 h1 {
+    font-family: "Cookie", cursive;
+    margin-top: 0px;
+    margin-bottom: 0.5rem;
+    color: rgb(107, 71, 62);
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 70px;
+    position: absolute;
+    top: 30%;
+    left: 3%;
+}
+
+.hero4 p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: rgb(68, 64, 64);
+    font-size: 15px;
+    position: absolute;
+    top: 47%;
+    left: 11%;
+}
+
+.hero4-button {
+    color: rgb(184, 56, 33);
+    text-decoration: none !important;
+    background-color: transparent;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.hero4-button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 123, 0);
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+
+.hero4-button:hover::after {
+    width: 100%;
+}
+
+.hero4-button:hover {
+    color: rgb(179, 51, 0);
+}
+
+
+.hero5 {
+    height: 314px;
+    width: 350px;
+    position: absolute;
+    top: 328px;
+    left: 1130px;
+    background-image: url(https://img.freepik.com/free-photo/front-view-handsome-athletic-male-rugby-player-holding-ball_23-2148793297.jpg?uid=R186515587&ga=GA1.1.1469364995.1732720250&semt=ais_hybrid);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero5 h1 {
+    font-family: "Cookie", cursive;
+    margin-top: 0px;
+    margin-bottom: 0.5rem;
+    color: rgb(107, 71, 62);
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 55px;
+    position: absolute;
+    top: 20%;
+    left: 2%;
+}
+
+.hero5 p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: rgb(68, 64, 64);
+    font-size: 15px;
+    position: absolute;
+    top: 37%;
+    left: 15%;
+}
+
+.hero5-button {
+    color: rgb(184, 56, 33);
+    text-decoration: none !important;
+    background-color: transparent;
+    position: absolute;
+    top: 48%;
+    left: 10%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.hero5-button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 123, 0);
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+
+.hero5-button:hover::after {
+    width: 100%;
+}
+
+.hero5-button:hover {
+    color: rgb(179, 51, 0);
+}
+
+.hero-text-nav h3{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #333;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 600px;
+    
+}
+
+.hero-text-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.category-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1400px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.product-item {
+    display: flex;
+    height: 483.188px;
+    width: 292.5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-grid {
+    width: 1300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+img {
+    width: 292.5px;
+    height: 360px;
+    object-fit: cover;
+}
+
+.login-page,
+.signup-page {
+    background-image: url(https://img.freepik.com/free-photo/top-view-desk-with-black-friday-gifts_23-2148288216.jpg?t=st=1742995843~exp=1742999443~hmac=3c80c85da0a6993d19d100b58b0ef140f4ef0a83f1ff4b014b6f523f8f4c52f2&w=1380);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+}
+
+.login-form,
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: rgba(240, 192, 133, 0.3);
+    border-radius: 10px;
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-page h1,
+.signup-page h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #333;
+}
+
+.login-info,
+.signup-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.login-input,
+.signup-input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    width: 250px;
+}
+
+.login-button,
+.signup-button {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    width: 260px;
+    background-color: #fff;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover,
+.signup-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgb(17, 17, 17);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 2px 0px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+
+
+.product-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.add-to-cart-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.add-to-cart-button:hover {
+    opacity: 1;
+}
+
+.adds {
+    background-color: #000;
+    height: 400px;
+    width: 100%;
+    color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://img.freepik.com/free-photo/concept-shopping-holidays-lifestyle-excited-handsome-guy-holding-paper-bag-with-gift-look_1258-155089.jpg?uid=R186515587&ga=GA1.1.1469364995.1732720250&semt=ais_hybrid);
+    background-size: cover;
+    background-position: center;
+}
+
+.adds1,
+.adds2,
+.adds3 {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+.hero6-button{
+    color: rgb(184, 56, 33);
+    text-decoration: none !important;
+    background-color: transparent;
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.hero6-button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 123, 0);
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+
+.hero6-button:hover::after {
+    width: 100%;
+    
+}
+
+
+
+
+.caption {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(100%);
+
+}
+
+
+
+.carousel-control-prev {
+    left: -80px;
+}
+
+
+.carousel-control-next {
+    right: -80px;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    filter: brightness(1.5);
+    transform: scale(1.2);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.carousel-item h3{
+    font-family: "Cookie", cursive;
+    color: rgb(107, 71, 62);
+    font-weight: 500;
+    font-size: 70px;
+}
+
+.carousel-item h1{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: rgb(68, 64, 64);
+    font-size: 35px;
+}
+.last-section{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+
+}
+.best-sellers h1, .hot-trends h1, .feature h1 {  
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    position: relative;
+    display: inline-block;
+}
+
+.best-sellers h1::after, .hot-trends h1::after, .feature h1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: rgb(255, 123, 0);
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+
+
+.e{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.hot-desc h3 , p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #333;
+    font-size: 1rem;
+}
+
+.best-sellers img, .hot-trends img, .feature img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    
+    margin: 10px;
+}
+.footer {
+    background-color: #646b72;
+    padding: 50px 0;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 50px;
+    height: 300px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    width: 25%;
+}
+
+.footer-content h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+
+
+
+.footer-bottom {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    background-color:#646b72 ;
+    
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.newsletter-input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-family: "Montserrat", sans-serif;
+    width: 200px;
+}
+
+.newsletter-button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+    background-color: #007bff;
+}
